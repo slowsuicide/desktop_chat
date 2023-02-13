@@ -469,7 +469,7 @@ height: $page_height;
     background: rgb(207,211,215);
     .profile_photo{
         height: $profile_photo_height;
-        background-image: url('/src/user_photos/profile_girl.jpg');
+        background-image: url('../user_photos/profile_girl.jpg');
         background-repeat: no-repeat;
         background-position:right;
         background-size: cover;

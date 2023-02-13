@@ -354,7 +354,7 @@
   background: #cfd3d7; }
   .profile .profile_photo {
     height: 30%;
-    background-image: url("/src/user_photos/profile_girl.jpg");
+    background-image: url("../user_photos/profile_girl.jpg");
     background-repeat: no-repeat;
     background-position: right;
     background-size: cover; }
