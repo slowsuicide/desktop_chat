@@ -4,6 +4,12 @@
 .channel_chat .chat_header {
   border-bottom: 1px solid rgba(0, 0, 0, 0.093); }
 
+.current_group_window .group_header .group_other:hover, .current_group_window .group_channels .channels_list .channel_info:hover, .current_group_window .group_friends .friends_list .friends_info:hover, .channel_chat .chat_header .others_chat_options .notif_and_info .bell:hover, .channel_chat .chat_header .others_chat_options .notif_and_info .info:hover {
+  cursor: pointer;
+  transition-duration: 0.3s;
+  background-color: #b7b5b5;
+  border-radius: 5px; }
+
 .profile .profile_main-info .profile_send-message .message_btn, .profile .profile_main-info .profile_send-message .other_btn {
   color: white;
   font-size: 15px;
@@ -18,7 +24,7 @@
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   display: flex;
   width: 100%;
-  height: 953; }
+  height: 953px; }
 
 .logo {
   display: flex;
@@ -27,35 +33,38 @@
   justify-content: center;
   border-radius: 50%;
   text-align: center;
-  margin: 25 auto;
   width: 55px;
   height: 55px;
   color: white;
   font-size: 30px;
   font-weight: 600;
   opacity: 0.4; }
+  .logo:hover {
+    cursor: pointer;
+    transition-duration: 0.3s;
+    opacity: 1; }
 
 .groups {
   max-width: 90px;
   min-width: 90px;
+  max-height: 953px;
   background: -webkit-linear-gradient(45deg, black, #555c5c); }
   .groups .group_list {
     width: 100%;
     height: 85%; }
-    .groups .group_list .logo:hover {
-      transition-duration: 0.3s;
-      opacity: 1; }
+    .groups .group_list .logo {
+      margin: 10px auto 10px; }
   .groups .group_add {
     width: 100%;
-    height: 15%; }
+    display: flex;
+    justify-content: center; }
     .groups .group_add .logo {
+      position: absolute;
+      bottom: 20px;
       font-family: Arial, Helvetica, sans-serif;
       background-color: #3b3b3b;
       font-size: 40px;
       font-weight: 10; }
-    .groups .group_add .logo:hover {
-      transition-duration: 0.3s;
-      opacity: 1; }
 
 .clr__red {
   background-color: red; }
@@ -99,6 +108,8 @@
       display: flex;
       justify-content: center;
       align-items: center; }
+      .current_group_window .group_header .group_info img:hover {
+        cursor: pointer; }
       .current_group_window .group_header .group_info .group_name {
         color: white;
         padding: 0 20px;
@@ -130,40 +141,33 @@
     font-weight: 500; }
     .current_group_window .group_channels .channels_list {
       overflow-y: scroll;
+      width: 100%;
       height: 320px;
       min-height: 200px;
       max-height: 320px; }
       .current_group_window .group_channels .channels_list .channel_info {
-        margin: 5px 0px 0px 40px;
-        padding: 5px 0px 0px 10px;
+        display: block;
+        padding-left: 50px;
         transition-duration: 0.2s;
-        width: 80%;
         height: 30px; }
-        .current_group_window .group_channels .channels_list .channel_info:hover {
-          transition-duration: 0.2s;
-          background-color: #b7b5b5;
-          border-radius: 5px; }
   .current_group_window .group_friends .friends_list {
     overflow-y: scroll;
     max-height: 300px; }
     .current_group_window .group_friends .friends_list .friends_info {
       transition-duration: 0.3s;
       height: 50px;
-      margin: 20px 0px 0px 20px;
+      padding: 10px 10px;
       display: flex;
       align-items: center; }
       .current_group_window .group_friends .friends_list .friends_info .friends_photo {
         padding-left: 15px; }
         .current_group_window .group_friends .friends_list .friends_info .friends_photo img {
+          image-rendering: auto;
           width: 50px;
           height: 50px;
           border-radius: 10px; }
       .current_group_window .group_friends .friends_list .friends_info .friends_nickname {
         padding-left: 15px; }
-      .current_group_window .group_friends .friends_list .friends_info:hover {
-        transition-duration: 0.3s;
-        background-color: #b7b5b5;
-        border-radius: 5px; }
 
 .channel_chat {
   width: 100%;
@@ -172,7 +176,7 @@
   .channel_chat .chat_header {
     color: #bbbaba;
     font-size: 20px;
-    height: 95.3;
+    height: 85.77px;
     display: flex;
     align-items: center;
     padding-left: 35px; }
@@ -206,6 +210,8 @@
         .channel_chat .chat_header .others_chat_options .search_in_chat img {
           width: 30px;
           height: 30px; }
+          .channel_chat .chat_header .others_chat_options .search_in_chat img:hover {
+            cursor: pointer; }
       .channel_chat .chat_header .others_chat_options .notif_and_info {
         margin-left: 30px;
         padding-top: 5px;
@@ -219,6 +225,10 @@
           filter: invert(40%); }
         .channel_chat .chat_header .others_chat_options .notif_and_info .bell {
           position: relative; }
+          .channel_chat .chat_header .others_chat_options .notif_and_info .bell:hover {
+            background: none; }
+        .channel_chat .chat_header .others_chat_options .notif_and_info .info:hover {
+          background: none; }
     @media (max-width: 1380px) {
       .channel_chat .chat_header {
         margin-left: 30px;
@@ -226,7 +236,7 @@
 
 .chat-messages {
   overflow-y: scroll;
-  height: 790.99; }
+  height: 790.99px; }
   .chat-messages .message {
     margin: 20px 0 20px 10px;
     display: flex; }
@@ -234,6 +244,7 @@
       width: 50px;
       padding: 0 20px 0 10px; }
       .chat-messages .message .profile_photo img {
+        image-rendering: optimizeQuality;
         width: 50px;
         height: 50px;
         border-radius: 10px; }
@@ -270,7 +281,7 @@
           border-radius: 5px; }
 
 .chat_send-message {
-  height: 63.287;
+  height: 75.287px;
   display: flex;
   align-items: center;
   width: 100%; }
@@ -293,12 +304,15 @@
     width: 25px;
     height: 25px;
     filter: invert(40%); }
+    .chat_send-message img:hover {
+      cursor: pointer; }
 
 .tag, .src {
   transition-duration: 0.3s;
   color: #091fc8; }
 
 .tag:hover, .src:hover {
+  cursor: pointer;
   text-decoration: underline;
   transition-duration: 0.3s; }
 
@@ -331,6 +345,7 @@
   height: 20px;
   border-radius: 5px;
   display: flex;
+  padding-top: 3px;
   align-items: center;
   justify-content: center;
   box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2); }
@@ -340,6 +355,7 @@
       height: 15px;
       width: 15px; }
   .smile-reaction:hover {
+    cursor: pointer;
     transition-duration: 0.2s;
     width: 60px;
     height: 30px;
@@ -388,6 +404,8 @@
           width: 20px;
           height: 20px;
           filter: invert(40%); }
+        .profile .profile_main-info .profile_social-media .social-media_icon:hover {
+          cursor: pointer; }
     .profile .profile_main-info .profile_send-message {
       display: flex;
       width: 100%; }
@@ -399,6 +417,7 @@
         height: 30px;
         width: 30px; }
       .profile .profile_main-info .profile_send-message .message_btn:hover, .profile .profile_main-info .profile_send-message .other_btn:hover {
+        cursor: pointer;
         transition-duration: 0.3s;
         background: blue; }
     .profile .profile_main-info .profile_other-info {
